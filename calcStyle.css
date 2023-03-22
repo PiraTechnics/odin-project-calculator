@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    background-color: gainsboro;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.calcGrid {
+    background-color: aqua;
+    border: 3px solid rgb(70, 70, 70);
+    box-shadow: 8px 8px gray;
+    border-radius: 5%;
+    padding: 20px 15px 5px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(0, 1fr) repeat(5, 65px);
+}
+
+.calcGrid > button {
+    margin: 0 1px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 2em;
+    border: 1px solid black;
+    background-color: azure;
+}
+
+.calcGrid > button:hover {
+    background-color: lightblue;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 1px solid black;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-wrap: break-all;
+}
+
+.previousOperand {
+    color: 255, 255, 255, 0.75;
+    font-size: 1.5em;
+}
+
+.currentOperand {
+    color: white;
+    font-size: 2.5em;
+}
